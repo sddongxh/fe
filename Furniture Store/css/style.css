@@ -56,9 +56,85 @@ body {
 }
 
 /* Category Grid CSS */
+.subHeading {
+  text-align:center;
+  border-bottom: 2px solid black;
+  width: 300px; 
+  margin: 50px auto;
+}
 
+#categoryGrid {
+  margin: 0px 5%;
+  display: grid; 
+  grid-template-columns: 33% 33% 34%;
+  grid-template-rows: 300px 300px 300px;
+  grid-template-areas: 
+  "categoryArea1 categoryArea2 categoryArea3"  
+  "categoryArea4 categoryArea4 categoryArea3" 
+  "categoryArea5 categoryArea5 categoryArea5" 
+}
 
+.categoryGridArea {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5px;
+  cursor: pointer;
+  display: grid;
+  align-content: end;
+  position: relative;
+}
 
+.heading {
+  background-color: rgba(0, 0, 0, 0.7);
+  /* padding: 5px; */
+  height: 25px;
+  color: white;
+  font-size: 18px;
+  border-bottom: 5px solid #FF6200; 
+  position: absolute;
+
+  width: 100%;
+  box-sizing: border-box;
+  bottom: 0px;
+  margin-bottom: 10px;
+  padding: 0px 10px 30px 10px;
+}
+
+#bookcases {
+  justify-content: space-around;
+  cursor: pointer;
+  background-image: url("../images/bookcases.png");
+  grid-area: categoryArea1; 
+}
+
+#bedroom {
+  justify-content: space-around;
+  cursor: pointer;
+  background-image: url("../images/beds.png");
+  grid-area: categoryArea2; 
+}
+
+#patio {
+  justify-content: space-around;
+  cursor: pointer;
+  background-image: url("../images/patio.png");
+  grid-area: categoryArea3;
+}
+
+#couches {
+  justify-content: space-around;
+  cursor: pointer;
+  background-image: url("../images/couch.png");
+  grid-area: categoryArea4;
+}
+
+#desks {
+  justify-content: space-around;
+  cursor: pointer;
+  background-image: url("../images/desks.png");
+  grid-area: categoryArea5;
+}
 
 /* Navigation CSS */
 /* CHECK OUT THIS CODE BELOW IF YOU WANT TO GET A REFRESHER ON FLEX */
