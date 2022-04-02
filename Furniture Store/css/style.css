@@ -12,25 +12,25 @@ body {
   grid-template-columns: 75% 25%;
   grid-template-rows: 75% 25% ;
   grid-template-areas: 
-  "topleft topright"
-  "topleft bottomright"
+  "featuredProduct secondaryProduct"
+  "featuredProduct CTA"
 }
 
 #featuredProduct {
   background-image: url("../images/furniture1.png");
-  grid-area: topleft;
+  grid-area: featuredProduct;
 }
 
 #secondaryProduct {
   background-image: url("../images/furniture2.png");
-  grid-area: topright;
+  grid-area: secondaryProduct;
 }
 
 #CTA {
   justify-content: space-around;
   cursor: pointer;
   background-image: url("../images/woodbg.png");
-  grid-area: bottomright;
+  grid-area: CTA;
 }
 
 .heroGridArea {
@@ -69,9 +69,9 @@ body {
   grid-template-columns: 33% 33% 34%;
   grid-template-rows: 300px 300px 300px;
   grid-template-areas: 
-  "categoryArea1 categoryArea2 categoryArea3"  
-  "categoryArea4 categoryArea4 categoryArea3" 
-  "categoryArea5 categoryArea5 categoryArea5" 
+  "bookcases bedroom patio"  
+  "couches couches patio" 
+  "desks desks desks" 
 }
 
 .categoryGridArea {
@@ -105,35 +105,35 @@ body {
   justify-content: space-around;
   cursor: pointer;
   background-image: url("../images/bookcases.png");
-  grid-area: categoryArea1; 
+  grid-area: bookcases; 
 }
 
 #bedroom {
   justify-content: space-around;
   cursor: pointer;
   background-image: url("../images/beds.png");
-  grid-area: categoryArea2; 
+  grid-area: bedroom; 
 }
 
 #patio {
   justify-content: space-around;
   cursor: pointer;
   background-image: url("../images/patio.png");
-  grid-area: categoryArea3;
+  grid-area: patio;
 }
 
 #couches {
   justify-content: space-around;
   cursor: pointer;
   background-image: url("../images/couch.png");
-  grid-area: categoryArea4;
+  grid-area: couches;
 }
 
 #desks {
   justify-content: space-around;
   cursor: pointer;
   background-image: url("../images/desks.png");
-  grid-area: categoryArea5;
+  grid-area: desks;
 }
 
 /* Navigation CSS */
@@ -199,4 +199,31 @@ h4 {
   font-weight: 300;
   margin: 0px 0px;
   color: #636364;
+}
+
+@media screen and (max-width: 1000px) {
+  #navigation {
+    display:none;
+  }
+  #icons {
+    display: auto;
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #headline {
+    position: static;
+    margin: 20px;
+  }
+  #heroGrid {
+    grid-template-areas: 
+    "featuredProduct featuredProduct"
+    "secondaryProduct CTA";
+  }
+  #categoryGrid {
+    grid-template-columns: 100%;
+    grid-template-rows: 300px 300px 300px 300px 300px; 
+    grid-template-areas: "bookcases" "bedroom" "patio" "couches" "desks";
+  }
 }
